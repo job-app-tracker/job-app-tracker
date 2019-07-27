@@ -32,4 +32,4 @@ If you've ever applied to multiple jobs and needed somewhere to track everything
 - Improve drag and drop of job cards
 - Delete and add new columns
 - Add unit tests
-- Improve metrics and maps page to reflect a users **jobs**
+- Improve metrics and maps page to reflect a users jobs
