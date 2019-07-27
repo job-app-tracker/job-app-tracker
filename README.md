@@ -11,8 +11,7 @@ If you've ever applied to multiple jobs and needed somewhere to track everything
 - map showing the location of every company on your board
 
 ## How To Run
-- cd into job-app-tracker folder
-- Run `npm i` to install all dependencies
+- clone the repository
 - cd into server folder
 - Run `npm i` to install all dependencies
 - Run `npm run start` and go to `http://localhost:3000/`
