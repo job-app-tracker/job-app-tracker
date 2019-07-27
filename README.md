@@ -1,6 +1,11 @@
 # Job App Tracker
 If you've ever applied to multiple jobs and needed somewhere to track everything, this is for you. This is a trello style software to help manage the tracking of job applications. It is a clone of [huntr](https://www.huntr.co/app/track/boards/589189b5448fe5e45f01256c/board?demo=1).
 
+This project was built by
+- [Celine](https://github.com/Surai98)
+- [Brennyn](https://github.com/BrennynSimpson)
+- [Dami](https://github.com/obayanju)
+
 ## Highlighted Features
 - Create an account
 - Multiple stages of the application process as columns
