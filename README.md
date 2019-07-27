@@ -3,7 +3,7 @@ If you've ever applied to multiple jobs and needed somewhere to track everything
 
 ## Highlighted Features
 - Create an account
-- Multiple stages of the the application process as columns
+- Multiple stages of the application process as columns
 - Job cards that store multiple information about a particular job
 - drag and drop a card from one application stage to another
 - Create a list of todos for each job
@@ -32,4 +32,4 @@ If you've ever applied to multiple jobs and needed somewhere to track everything
 - Improve drag and drop of job cards
 - Delete and add new columns
 - Add unit tests
-- Improve metrics and maps page to reflect a users jobs
+- Improve metrics and maps page to reflect a users **jobs**
