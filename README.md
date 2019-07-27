@@ -10,6 +10,15 @@ If you've ever applied to multiple jobs and needed somewhere to track everything
 - Chart to help visualize every action taken i.e all jobs added to the wishlist column
 - map showing the location of every company on your board
 
+## How To Run
+- cd into job-app-tracker folder
+- Run `npm i` to install all dependencies
+- cd into server folder
+- Run `npm i` to install all dependencies
+- Run `npm run start` and go to `http://localhost:3000/`
+- 🥳🥳🥳🥳
+* If You experience any issue, you can add a new issue in the issues tab, and we'll be happy to assist with it 😊
+
 ## Screenshot
 ![screenshot](job-app-tracker.png)
 
