@@ -1,7 +1,8 @@
 # Job App Tracker
 If you've ever applied to multiple jobs and needed somewhere to track everything, this is for you. This is a trello style software to help manage the tracking of job applications. It is a clone of [huntr](https://www.huntr.co/app/track/boards/589189b5448fe5e45f01256c/board?demo=1).
 
-## Heroku URL
+## URL
+[job app tracker](https://fast-citadel-67812.herokuapp.com)
 
 This project was built by
 - [Celine](https://github.com/Surai98)
@@ -16,14 +17,6 @@ This project was built by
 - Create a list of todos for each job
 - Chart to help visualize every action taken i.e all jobs added to the wishlist column
 - map showing the location of every company on your board
-
-## How To Run
-- clone the repository
-- cd into server folder
-- Run `npm i` to install all dependencies
-- Run `npm run start` and go to `http://localhost:3000/`
-- 🥳🥳🥳🥳
-* If You experience any issue, you can add a new issue in the issues tab, and we'll be happy to assist with it 😊
 
 ## Screenshot
 ![screenshot](job-app-tracker.png)
