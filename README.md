@@ -1,8 +1,5 @@
 # Job App Tracker
-If you've ever applied to multiple jobs and needed somewhere to track everything, this is for you. This is a trello style software to help manage the tracking of job applications. It is a clone of [huntr](https://www.huntr.co/app/track/boards/589189b5448fe5e45f01256c/board?demo=1).
-
-## URL
-[job app tracker](https://fast-citadel-67812.herokuapp.com)
+If you've ever applied to multiple jobs and needed somewhere to track everything, [job app tracker](https://fast-citadel-67812.herokuapp.com) is for you. This is a trello style software to help manage the tracking of job applications. It is a clone of [huntr](https://www.huntr.co/app/track/boards/589189b5448fe5e45f01256c/board?demo=1).
 
 This project was built by
 - [Celine](https://github.com/Surai98)
