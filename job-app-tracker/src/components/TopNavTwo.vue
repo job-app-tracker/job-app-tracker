@@ -11,20 +11,12 @@
       <v-flex xs3>
         <v-menu>
           <template v-slot:activator="{ on }">
-            <v-btn
-              flat
-              outline
-              v-on="on"
-            >
+            <v-btn flat outline v-on="on">
               My first board
             </v-btn>
           </template>
           <v-list>
-            <v-list-tile
-              v-for="(item, index) in items"
-              :key="index"
-              @click=""
-            >
+            <v-list-tile v-for="(item, index) in items" :key="index" @click="">
               <v-list-tile-title>{{ item.title }}</v-list-tile-title>
             </v-list-tile>
           </v-list>
@@ -59,11 +51,11 @@
       </v-layout>
       <v-flex xs3 text-xs-right>
         <a href="mailto:?subject=<SUBJECT>&body=<index.html>">
-        <v-btn outline flat color="#000" small class="">
-        <v-icon right> share </v-icon> Share Board
-       </v-btn>
+          <v-btn outline flat color="#000" small class="">
+            <v-icon right> share </v-icon> Share Board
+          </v-btn>
         </a>
-     </v-flex>
+      </v-flex>
     </v-layout>
 
     <v-spacer></v-spacer>
@@ -75,9 +67,7 @@
 export default {
   data() {
     return {
-      items: [
-        { title: 'My First Board' }
-      ]
+      items: [{ title: "My First Board" }]
     };
   }
 };

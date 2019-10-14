@@ -110,7 +110,11 @@ export default {
   },
   data() {
     return {
-      url: "http://localhost:3000",
+      prod: true,
+      port: 8080,
+      devURL: `http://localhost:${this.port}`,
+      prodURL: "https://fast-citadel-67812.herokuapp.com",
+      url: "",
       enabled: true,
       dragging: false,
       more_button_options: [
@@ -122,6 +126,12 @@ export default {
   },
 
   created: function() {
+    // this might be redundant as we usually run the app trom the server
+    if (this.prod) {
+      this.url = this.prodURL;
+    } else {
+      this.url = this.devURL;
+    }
     this.loadStages();
   },
 
