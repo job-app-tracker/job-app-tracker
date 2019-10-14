@@ -70,7 +70,7 @@ export default {
       deleteHover: false,
       dialog: false,
       width: 400,
-      url: "http://localhost:3000"
+      url: "https://fast-citadel-67812.herokuapp.com"
     };
   },
   methods: {

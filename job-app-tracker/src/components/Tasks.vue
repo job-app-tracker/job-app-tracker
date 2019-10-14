@@ -1,9 +1,5 @@
 <template>
-  <v-container
-    fluid
-    class="pa-0 ma-0"
-    fill-height
-  >
+  <v-container fluid class="pa-0 ma-0" fill-height>
     <v-layout row wrap>
       <v-flex d-flex xs12 sm4 md3 class="pa-0 ma-0">
         <v-card color="dark" white height="87vh">
@@ -135,25 +131,39 @@
                     pt-2
                     pb-2
                   >
-                    
                     <v-flex xs1 text-xs-center>
-                      <input type="checkbox" name="" id="" @click="updateTasks(todo, job)" />
+                      <input
+                        type="checkbox"
+                        name=""
+                        id=""
+                        @click="updateTasks(todo, job)"
+                      />
                     </v-flex>
 
-                    <v-flex xs5 v-if="!todo.completed" v-on:click="todo.active = !todo.active">
+                    <v-flex
+                      xs5
+                      v-if="!todo.completed"
+                      v-on:click="todo.active = !todo.active"
+                    >
                       {{ todo.content }}
                     </v-flex>
 
                     <v-flex xs5 v-else>
-                      <span style="text-decoration: line-through; color: #ccc;">{{ todo.content }}</span>
+                      <span
+                        style="text-decoration: line-through; color: #ccc;"
+                        >{{ todo.content }}</span
+                      >
                     </v-flex>
 
                     <v-flex xs6 text-xs-right>
-                      {{ job.title}}
+                      {{ job.title }}
                       <v-avatar size="15px" color="grey lighten-4">
                         <img :src="`//logo.clearbit.com/${job.image}.com`" />
                       </v-avatar>
-                      <span style="background-color: red; border-radius: 5px; color: #fff; padding: 3px 3px; margin-left: 5px; font-size: .7rem;">{{ todo.deadline}}</span>
+                      <span
+                        style="background-color: red; border-radius: 5px; color: #fff; padding: 3px 3px; margin-left: 5px; font-size: .7rem;"
+                        >{{ todo.deadline }}</span
+                      >
                     </v-flex>
 
                     <v-flex xs2 text-xs-center v-if="todo.active">
@@ -185,7 +195,7 @@ export default {
   data() {
     return {
       myJob: "",
-      url: "http://localhost:3000",
+      url: "https://fast-citadel-67812.herokuapp.com",
       date: new Date().toISOString().substring(0, 10),
       menu: false,
       modal: false,
@@ -219,10 +229,10 @@ export default {
     this.loadJobs();
   },
   methods: {
-    deleteTodo: function  ( job, todo ){
+    deleteTodo: function(job, todo) {
       console.log(todo);
       // job.todos.forEach(todo => {
-        
+
       // });
       // fetch( `${ this.url }/jobs/${ job._id }`, {
       //     method: "PUT"
@@ -271,7 +281,7 @@ export default {
       }).then(response => {
         console.log(response.status);
       });
-    },
+    }
   },
 
   mounted: function() {}
@@ -279,5 +289,4 @@ export default {
 </script>
 
 <style>
-
 </style>
