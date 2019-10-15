@@ -63,14 +63,14 @@ import JobDialog from "./JobDialog.vue";
 
 export default {
   name: "JobCard",
-  props: ["job"],
+  props: ["job", "url"],
   components: { JobDialog },
   data: function() {
     return {
       deleteHover: false,
       dialog: false,
-      width: 400,
-      url: "https://fast-citadel-67812.herokuapp.com"
+      width: 400
+      // url: "https://fast-citadel-67812.herokuapp.com"
     };
   },
   methods: {
@@ -92,14 +92,13 @@ export default {
       }).then(response => {
         if (response.status == 204) {
           console.log("It worked");
-          this.$emit("updateJobsEvent");
+          this.$emit("removeJobEvent");
         } else if (response.status == 400) {
           response.json().then(data => {
             alert(data.msg);
           });
         }
       });
-      // window.location.reload();
     }
   }
 };

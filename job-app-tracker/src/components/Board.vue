@@ -62,7 +62,11 @@
         >
 
         <!-- Add jobs button -->
-        <AddJobBtn :stage="stage" />
+        <AddJobBtn
+          :stage="stage"
+          :url="url"
+          @updateJobEvent="handleJobsUpdate(stage)"
+        />
 
         <!-- Start Job Cards -->
 
@@ -84,8 +88,9 @@
               :key="job._id"
               :job="job"
               :color="job.color"
+              :url="url"
               @updateInfoEvent="handleUpdateInfo"
-              @updateJobsEvent="removeJob(job)"
+              @removeJobEvent="removeJob(job)"
             />
           </Draggable>
         </div>
@@ -110,9 +115,9 @@ export default {
   },
   data() {
     return {
-      prod: true,
-      port: 8080,
-      devURL: `http://localhost:${this.port}`,
+      prod: false,
+      port: 3000,
+      devURL: `http://localhost:3000`,
       prodURL: "https://fast-citadel-67812.herokuapp.com",
       url: "",
       enabled: true,
@@ -196,9 +201,24 @@ export default {
           this.stages[job.position].jobs.splice(i, 1);
       });
     },
+    handleJobsUpdate: function(stage) {
+      console.log("Updating Jobs at stage -> ", stage);
+      fetch(`${this.url}/jobs`).then(response => {
+        response.json().then(data => {
+          this.stages.forEach(stage => {
+            stage.jobs = [];
+          });
+          this.stages[stage.position].jobs = [];
+          data.jobs.forEach(job => {
+            this.stages[job.position].jobs.push(job);
+          });
+        });
+      });
+    },
     loadStages: function() {
       fetch(`${this.url}/stages`).then(response => {
-        console.log(" stages response -> ", response.status);
+        console.log(`stages url -> ${this.url}`);
+        console.log(`stages response -> ${response.status}`);
         response.json().then(data => {
           const stagesLength = data.stages.length;
           for (let i = 0; i < stagesLength; i++) {

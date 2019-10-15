@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  props: ["dialogState", "stage"],
+  props: ["dialogState", "stage", "url"],
   data() {
     return {
       colors: [
@@ -39,7 +39,7 @@ export default {
         "deep-purple",
         "teal"
       ],
-      url: "https://fast-citadel-67812.herokuapp.com",
+      // url: "https://fast-citadel-67812.herokuapp.com",
       new_job_position: this.stage.position,
       new_job_company: "",
       new_job_title: "",
@@ -58,7 +58,7 @@ export default {
 
     addNewJob: function() {
       this.dialogState = false;
-      console.log("Adding new job");
+      console.log("-------Adding new job------------");
       var req_body = {
         company: this.new_job_company,
         position: this.new_job_position,
@@ -66,21 +66,22 @@ export default {
         title: this.new_job_title,
         image: this.new_job_company.toLowerCase()
       };
-      console.log(req_body);
-      console.log(this.checkColumn());
+      // console.log(req_body);
+      // console.log(this.checkColumn());
       fetch(`${this.url}/jobs`, {
         method: "POST",
         headers: {
           "Content-type": "application/json"
         },
         body: JSON.stringify(req_body)
-      }).then(function(response) {});
-      window.location.reload();
-      (this.new_job_color = ""),
-        (this.new_job_title = ""),
-        (this.new_job_company = ""),
-        (this.new_job_image = ""),
+      }).then(response => {
         this.handleDialogClose();
+        console.log("Add Job Post Request status -> ", response.status);
+      });
+      this.new_job_color = "";
+      this.new_job_title = "";
+      this.new_job_company = "";
+      this.new_job_image = "";
     },
 
     handleDialogClose: function() {
