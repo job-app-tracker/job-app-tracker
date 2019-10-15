@@ -115,7 +115,7 @@ export default {
   },
   data() {
     return {
-      prod: false,
+      prod: true,
       port: 3000,
       devURL: `http://localhost:3000`,
       prodURL: "https://fast-citadel-67812.herokuapp.com",
